@@ -10,6 +10,19 @@
   </div>
   <!-- ./row -->
 
+  <div class="row">
+    <div class="sixteen wide column">
+      <div class="ui middle aligned large divided list" id="offers-list">
+        {{#each offers}}
+          {{> offer}}
+        {{/each}}
+      </div>
+      <!-- /.list -->
+    </div>
+    <!-- ./sixteen.wide.column -->
+  </div>
+  <!-- ./row -->
+
   {{#if currentUser}}
     {{> form_offer}}
   {{/if}}

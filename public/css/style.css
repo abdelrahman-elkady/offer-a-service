@@ -4,6 +4,19 @@
 }
 
 #login-buttons > .login-link-and-dropdown-list > a {
-  text-decoration: none ;
-  color: white ;
+  text-decoration: none;
+  color: white;
+}
+
+#offers-list {
+  margin-top: 20px;
+}
+
+.ui.green.text {
+  color: green;
+}
+
+.ui.green.bold.text {
+  font-weight: bolder;
+  color: green;
 }
