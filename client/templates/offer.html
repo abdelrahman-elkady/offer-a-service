@@ -3,6 +3,11 @@
   <div class="item">
     <!-- Right content -->
     <div class="right floated content">
+
+      {{#if isOwner }}
+        <a href="#"><i class="ui red remove icon"></i></a>
+      {{/if}}
+
       <!-- only registered users can accept an offer -->
       {{#if currentUser}}
         <div class="ui green small animated fade button">
