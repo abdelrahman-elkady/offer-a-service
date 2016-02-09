@@ -8,5 +8,10 @@ Template.form_offer.events({
 
     Meteor.call("addOffer", Meteor.userId(), username, target.offer.value,
       target.exchange.value, target.details.value);
-  }
+
+    target.offer.value = "";
+    target.exchange.value = "";
+    target.details.value = "";
+  },
+
 });
