@@ -5,8 +5,8 @@ Accounts.ui.config({
 Template.home.helpers({
   offers: function() {
     return Offers.find({}, {
-      owner: {
-        $ne: Meteor.userId()
+      sort: {
+        createdAt: -1
       }
     });
   }
