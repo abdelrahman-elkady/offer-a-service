@@ -3,16 +3,16 @@
     <div class="sixteen wide column">
       <div class="ui segment">
 
-        <div class="ui small form">
+        <form class="ui small form">
           <div class="fields">
             <div class="eight wide  field">
               <label>Offering</label>
-              <input type="text" placeholder="Programming">
+              <input type="text" name="offer" placeholder="Programming">
             </div>
 
             <div class="eight wide  field">
               <label>For</label>
-              <input type="text" placeholder="Cooking">
+              <input type="text" name="exchange" placeholder="Cooking">
             </div>
           </div>
           <!-- /.fields -->
@@ -20,14 +20,13 @@
           <div class="fields">
             <div class="sixteen wide field">
               <label>Details</label>
-              <textarea rows="2" placeholder="describe your offer ..."></textarea>
+              <textarea rows="2" name="details" placeholder="describe your offer ..."></textarea>
             </div>
           </div>
           <!-- /.fields -->
 
-          <button id="create-offer" class="ui fluid green button">Offer</button>
-
-        </div>
+          <input type="submit" class="ui fluid green button" value="Offer">
+        </form>
         <!-- /.form -->
       </div>
       <!-- ./segment -->

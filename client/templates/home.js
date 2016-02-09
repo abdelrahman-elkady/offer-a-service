@@ -3,18 +3,12 @@ Accounts.ui.config({
 });
 
 Template.home.helpers({
-  offers: [{
-      owner: "kady",
-      offer: "Programming",
-      for: "Cooking",
-      details: "Wanna cook a cake for a Java program",
-    }, {
-      owner: "crazy Ivan",
-      offer: "Killing",
-      for: "Killing",
-      details: "I have no idea what am doing here",
-    }
-  ],
-
+  offers: function() {
+    return Offers.find({}, {
+      owner: {
+        $ne: Meteor.userId()
+      }
+    });
+  }
 
 });
