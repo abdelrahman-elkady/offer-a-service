@@ -13,10 +13,13 @@ Template.offer.helpers({
 
 Template.offer.events({
   "click .ui.remove.icon": function(event) {
-    console.log("CLICKED" + this._id);
     event.preventDefault();
 
     Meteor.call("deleteOffer", this._id);
 
+  },
+
+  "click .ui.small.animated.fade.button": function(event) {
+    Meteor.call("acceptOffer", this._id); // FIXME :That's fast, have a confirmation or something :D
   }
 });

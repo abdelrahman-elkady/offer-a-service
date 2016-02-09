@@ -4,7 +4,11 @@ Accounts.ui.config({
 
 Template.home.helpers({
   offers: function() {
-    return Offers.find({}, {
+    return Offers.find({
+      accepted: {
+        $ne: true
+      }
+    }, {
       sort: {
         createdAt: -1
       }
