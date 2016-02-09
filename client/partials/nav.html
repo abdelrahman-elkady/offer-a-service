@@ -1,11 +1,30 @@
 <template name="navbar">
   <div class="row">
-    <nav class="ui secondary menu">
-      <div class="item">
-        <div class="ui primary button">
-          {{> loginButtons}}
+    <div class="ui sixteen column">
+
+      <nav class="ui secondary menu">
+        <div class="item">
+          <div class="ui primary button">
+            {{> loginButtons}}
+          </div>
         </div>
-      </div>
-    </nav>
+
+        <!-- Right menu -->
+        <div class="right menu">
+          <a class="item">
+            <i class="icon feed"></i>
+            Accepted offers
+            {{#if acceptedAny}}
+              <div class="floating ui green label">{{acceptedCount}}</div>
+            {{/if}}
+          </a>
+        </div>
+        <!-- /Right menu -->
+
+      </nav>
+
+    </div>
+    <!-- /.ui.sixteen.column -->
   </div>
+  <!-- /.row -->
 </template>
