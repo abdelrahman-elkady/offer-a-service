@@ -1,0 +1,32 @@
+<template name="accepted">
+
+  <div class="ui row">
+    <div class="sixteen wide column">
+      <div class="ui center aligned">
+        <h2 class="ui header center aligned">Accepted offers</h2>
+      </div>
+    </div>
+    <!-- ./sixteen.wide.column -->
+  </div>
+  <!-- ./row -->
+
+  <div class="sixteen wide column">
+    <div class="row">
+      <div class="ui middle aligned large divided list" id="offers-list">
+        {{#each offers}}
+          {{> offer}}
+        {{/each}}
+      </div>
+      <!-- /.list -->
+    </div>
+    <!-- ./row -->
+
+    <div class="row">
+      <a href="/" class="ui fluid blue button back-button">Back</a>
+    </div>
+    <!-- ./row -->
+
+  </div>
+  <!-- ./sixteen.wide.column -->
+
+</template>
